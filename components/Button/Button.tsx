@@ -1,5 +1,6 @@
-import styled from "@emotion/styled";
+/* eslint-disable prettier/prettier */
 import { MouseEvent } from "react";
+import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/react";
 import { AppTheme } from "@/styles/themes";
 import { boxShadow, transition } from "@/components/styles";
