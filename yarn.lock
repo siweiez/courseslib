@@ -2423,6 +2423,13 @@
     "lodash" "^4.17.21"
     "regenerator-runtime" "^0.13.7"
 
+"@storybook/expect@storybook-jest":
+  "integrity" "sha512-cP99mhWN/JeCp7VSIiymvj5tmuMY050iFohvp8Zq+kewKsBSZ6/qpTJAGCCZk6pneTcp4S0Fm5BSqyxzbyJ3gw=="
+  "resolved" "https://registry.npmjs.org/@storybook/expect/-/expect-27.5.2-0.tgz"
+  "version" "27.5.2-0"
+  dependencies:
+    "@types/jest" ">=26.0.0"
+
 "@storybook/instrumenter@^6.4.0", "@storybook/instrumenter@6.5.9":
   "integrity" "sha512-I2nu/6H0MAy8d+d3LY/G6oYEFyWlc8f2Qs2DhpYh5FiCgIpzvY0DMN05Lf8oaXdKHL3lPF/YLJH17FttekXs1w=="
   "resolved" "https://registry.npmjs.org/@storybook/instrumenter/-/instrumenter-6.5.9.tgz"
@@ -2433,6 +2440,16 @@
     "@storybook/core-events" "6.5.9"
     "core-js" "^3.8.2"
     "global" "^4.4.0"
+
+"@storybook/jest@^0.0.10":
+  "integrity" "sha512-qeYLIplpcOUQXboJde5pRCjTvkGmF80jEszRUoNYCNcEPfC2sMK68Wq6Ct8EQj3CoEdJqsK54O2YYh+7D9S+ag=="
+  "resolved" "https://registry.npmjs.org/@storybook/jest/-/jest-0.0.10.tgz"
+  "version" "0.0.10"
+  dependencies:
+    "@storybook/expect" "storybook-jest"
+    "@storybook/instrumenter" "^6.4.0"
+    "@testing-library/jest-dom" "^5.16.2"
+    "jest-mock" "^27.3.0"
 
 "@storybook/manager-webpack4@6.5.9":
   "integrity" "sha512-49LZlHqWc7zj9tQfOOANixPYmLxqWTTZceA6DSXnKd9xDiO2Gl23Y+l/CSPXNZGDB8QFAwpimwqyKJj/NLH45A=="
@@ -2753,7 +2770,7 @@
     "lz-string" "^1.4.4"
     "pretty-format" "^27.0.2"
 
-"@testing-library/jest-dom@^5.16.4":
+"@testing-library/jest-dom@^5.16.2", "@testing-library/jest-dom@^5.16.4":
   "integrity" "sha512-Gy+IoFutbMQcky0k+bqqumXZ1cTGswLsFqmNLzNdSKkU9KGV2u9oXhukCbbJ9/LRPKiqwxEE8VpV/+YZlfkPUA=="
   "resolved" "https://registry.npmjs.org/@testing-library/jest-dom/-/jest-dom-5.16.4.tgz"
   "version" "5.16.4"
@@ -2904,7 +2921,7 @@
   dependencies:
     "@types/istanbul-lib-report" "*"
 
-"@types/jest@*":
+"@types/jest@*", "@types/jest@>=26.0.0":
   "integrity" "sha512-5dNM7mMuIrCtNJsFfvUO/5xCrG8swuT2c7ND+sl3XwlwxJf3k7e7o+PRvcFN/iIm8XhCqHqxLOj9yutDDOJoRg=="
   "resolved" "https://registry.npmjs.org/@types/jest/-/jest-28.1.2.tgz"
   "version" "28.1.2"
@@ -7908,7 +7925,7 @@
     "slash" "^3.0.0"
     "stack-utils" "^2.0.3"
 
-"jest-mock@^27.0.6":
+"jest-mock@^27.0.6", "jest-mock@^27.3.0":
   "integrity" "sha512-K4jKbY1d4ENhbrG2zuPWaQBvDly+iZ2yAW+T1fATN78hc0sInwn7wZB8XtlNnvHug5RMwV897Xm4LqmPM4e2Og=="
   "resolved" "https://registry.npmjs.org/jest-mock/-/jest-mock-27.5.1.tgz"
   "version" "27.5.1"
