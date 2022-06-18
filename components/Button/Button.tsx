@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { MouseEvent } from "react";
 import { css, SerializedStyles } from "@emotion/react";
-import { AppTheme } from "../../styles/themes";
-import { boxShadow, transition } from "../../components/styles";
+import { AppTheme } from "@/styles/themes";
+import { boxShadow, transition } from "@/components/styles";
 
 export type Color = "primary" | "secondary" | "danger" | "warning";
 
@@ -51,9 +51,11 @@ export const Button = styled.button<Props>`
     opacity: 0.9;
   }
   ${transition()}
-  ${({ theme }) => boxShadow(theme.components.shadow1, theme.components.shadow2)}
+  ${({ theme }) =>
+    boxShadow(theme.components.shadow1, theme.components.shadow2)}
   &:active {
-    ${({ theme }) => boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
+    ${({ theme }) =>
+    boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
   }
 `;
 

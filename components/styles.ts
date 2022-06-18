@@ -1,7 +1,6 @@
 import { css } from "@emotion/react";
 
 // https://github.com/styled-components/styled-components/issues/397
-
 export const boxShadow = (
   shadowColor1: string,
   shadowColor2: string,
