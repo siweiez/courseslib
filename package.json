@@ -9,7 +9,8 @@
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "test": "jest"
+    "test": "jest",
+    "chromatic": "npx chromatic --project-token b120e25b8b1f"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -36,7 +37,7 @@
     "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
     "babel-loader": "^8.2.5",
-    "chromatic": "^6.6.2",
+    "chromatic": "^6.5.3",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "eslint-plugin-prettier": "^4.0.0",
