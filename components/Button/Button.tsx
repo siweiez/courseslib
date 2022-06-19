@@ -1,9 +1,8 @@
-/* eslint-disable prettier/prettier */
 import { MouseEvent } from "react";
 import styled from "@emotion/styled";
 import { css, SerializedStyles } from "@emotion/react";
 import { AppTheme } from "@/styles/themes";
-import { boxShadow, transition } from "@/components/styles";
+import { boxShadow, transition, borderRadius } from "@/components/styles";
 
 export type Color = "primary" | "secondary" | "danger" | "warning";
 
@@ -15,11 +14,11 @@ export type Props = {
 
 export const getColors = (theme: AppTheme, color?: Color): SerializedStyles => {
   switch (color) {
+    case "primary":
     case "secondary":
       return css`
         color: ${theme.font.regular};
       `;
-    case "primary":
     case "danger":
       return css`
         background: ${theme.components[color]};
@@ -46,7 +45,7 @@ export const Button = styled.button<Props>`
   font-size: 1.6rem;
   width: 15rem;
   height: 4rem;
-  border-radius: 1rem;
+  ${borderRadius};
   ${({ theme, color }) => getColors(theme, color)};
   &:hover {
     opacity: 0.9;
