@@ -1,6 +1,5 @@
 import * as NextImage from "next/image";
 import { ThemeProvider, Global } from "@emotion/react";
-
 import { Themes } from "../styles/themes";
 import { GlobalStyles } from "../styles/global";
 
