@@ -4,6 +4,7 @@ import styled from "@emotion/styled";
 import { Logo } from "@/components/Logo";
 import { Input } from "@/components/Input";
 import { IconButton } from "@/components/IconButton";
+import { StyledLink } from "@/components/StyledLink";
 
 const Wrapper = styled.div`
   display: grid;
@@ -51,14 +52,6 @@ const StyledLogo = styled(Logo)`
   }
 `;
 
-const LogoLink = styled.a`
-  all: unset;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.9;
-  }
-`;
-
 const MainNav = styled.nav`
   grid-area: nav;
   display: flex;
@@ -93,22 +86,32 @@ const Footer = styled.footer`
   height: 5rem;
 `;
 
-export const Layout: FC<{ children: any }> = ({ children }) => (
+type Props = {
+  isDark: boolean;
+  onThemeToggle: () => void;
+  children: any;
+};
+
+export const Layout: FC<Props> = ({ children, isDark, onThemeToggle }) => (
   <Wrapper>
     <Link href="/" passHref>
-      <LogoLink>
-        <StyledLogo size={3}>Courses</StyledLogo>
-      </LogoLink>
+      <StyledLink>
+        <StyledLogo size={3}>C8X</StyledLogo>
+      </StyledLink>
     </Link>
     <MainNav>
       <Link href="/all">All</Link>
       <Link href="/news">News</Link>
-      <IconButton name="Moon" size={1} onClick={() => null} />
+      <IconButton
+        name={isDark ? "Moon" : "Sun"}
+        size={1}
+        onClick={onThemeToggle}
+      />
     </MainNav>
     <SearchInput icon="Search" placeholder="Search" onChange={() => null} />
     <Content>{children}</Content>
     <Footer>
-      © {new Date().getFullYear()} SiweiZhang. All rights reserved.
+      © {new Date().getFullYear()} NickOvchinnikov. All rights reserved.
     </Footer>
   </Wrapper>
 );
