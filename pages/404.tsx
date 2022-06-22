@@ -20,7 +20,7 @@ export default function Custom404() {
   return (
     <Wrapper>
       <Logo>404</Logo>
-      <Logo>Page Not Found . .</Logo>
+      <Logo>Page Not Found . . . </Logo>
       <Link href="/" passHref>
         <CustomLink>Go to Home</CustomLink>
       </Link>
