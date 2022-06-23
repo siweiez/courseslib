@@ -19,5 +19,5 @@ export const transition = () =>
   `;
 
 export const borderRadius = css`
-border-radius: 1rem;
+  border-radius: 1rem;
 `;

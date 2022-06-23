@@ -22,7 +22,7 @@ const Button = styled.button<ButtonProps>`
     boxShadow(theme.components.shadow1, theme.components.shadow2)}
   &:active {
     ${({ theme }) =>
-    boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
+      boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
   }
   &:hover {
     opacity: 0.9;

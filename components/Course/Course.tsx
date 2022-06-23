@@ -37,7 +37,7 @@ export const Course: FC<Props> = ({ children, header, link, imageProps }) => (
     <Link href={link} passHref>
       <CourseLink>
         <h2>{header}</h2>
-        <Image {...imageProps} />
+        <Image alt="" {...imageProps} />
         {children}
       </CourseLink>
     </Link>

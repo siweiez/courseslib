@@ -18,7 +18,7 @@ const StyledInput = styled.input`
   }
   &:focus {
     ${({ theme }) =>
-    boxShadow(theme.components.shadow1, theme.components.shadow2)}
+      boxShadow(theme.components.shadow1, theme.components.shadow2)}
     ~ svg {
       color: ${({ theme }) => theme.font.regular};
       opacity: 1;

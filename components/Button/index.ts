@@ -3,5 +3,5 @@ export {
   PrimaryButton,
   SecondaryButton,
   WarningButton,
-  DangerButton
+  DangerButton,
 } from "./Button";
