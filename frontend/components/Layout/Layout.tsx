@@ -4,7 +4,6 @@ import { ThemeProvider } from "@emotion/react";
 import { Themes } from "@/styles/themes";
 import { IconButton } from "@/components/IconButton";
 import { StyledLink } from "@/components/StyledLink";
-
 import {
   Wrapper,
   LogoLink,
@@ -26,10 +25,13 @@ export const Layout: FC = ({ children }) => {
   };
 
   useIsomorphicLayoutEffect(() => {
-    const isDark =
-      Boolean(localStorage.getItem("theme") === "dark") ||
-      window.matchMedia("prefers-color-scheme: dark").matches;
-    setIsDark(isDark);
+    const theme = localStorage.getItem("theme");
+    const themeExistsInStorage = Boolean(theme !== null);
+    setIsDark(
+      themeExistsInStorage
+        ? Boolean(theme === "dark")
+        : window.matchMedia("(prefers-color-scheme: dark)").matches
+    );
   }, []);
 
   const theme = Themes[isDark ? "dark" : "light"];
@@ -53,7 +55,7 @@ export const Layout: FC = ({ children }) => {
             <IconButton name="Login" size={1} />
           </Link>
           <IconButton
-            name={isDark ? "Moon" : "Sun"}
+            name={!isDark ? "Moon" : "Sun"}
             size={1}
             onClick={toggleDark}
           />
