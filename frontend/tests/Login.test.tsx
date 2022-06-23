@@ -10,7 +10,6 @@ describe("Login page", () => {
   it("Client validation check", async () => {
     render(<Login />);
     const submitButton = screen.getByRole("button", { name: "Sign In" });
-
     await act(async () => {
       userEvent.click(submitButton);
     });
@@ -45,6 +44,7 @@ describe("Login page", () => {
       );
     });
     const alerts = screen.getAllByRole("alert");
+    expect(alerts).toHaveLength(2);
     expect(alerts[0]).toMatchSnapshot();
     expect(alerts[1]).toMatchSnapshot();
   });
