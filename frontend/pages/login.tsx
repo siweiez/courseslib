@@ -11,15 +11,19 @@ const StyledInput = styled(Input)`
 `;
 
 const Login: NextPage = () => {
-  const onSubmit = () => { };
+  const onSubmit = () => {};
   return (
     <>
-    <br />
-    <br />
+      <br />
+      <br />
       <form onSubmit={onSubmit}>
         <CenteredTile header="Login">
           <StyledInput label="Identifier" placeholder="username or email" />
-          <StyledInput label="Password" type="password" placeholder="password" />
+          <StyledInput
+            label="Password"
+            type="password"
+            placeholder="password"
+          />
           <Button type="submit">Sign In</Button>
           <h3>
             <Link href="/registration" passHref>
