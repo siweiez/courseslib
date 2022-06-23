@@ -46,7 +46,7 @@ export const Checkbox: FC<Props> = ({ onChange }) => {
   return (
     <Wrapper>
       <input id={fieldId} type="checkbox" onChange={onChange} />
-      <VisiblePart htmlFor={fieldId}>✔</VisiblePart>
+      <VisiblePart htmlFor={fieldId}>✓</VisiblePart>
     </Wrapper>
   );
 };
