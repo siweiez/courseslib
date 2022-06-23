@@ -13,7 +13,7 @@ exports[`Checkbox test cases Render check 1`] = `
       class="css-1mnn8lt"
       for="fffffffbb47d08"
     >
-      ✔
+      ✓
     </label>
   </label>
 </DocumentFragment>

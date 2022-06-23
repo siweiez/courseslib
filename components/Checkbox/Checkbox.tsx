@@ -12,7 +12,7 @@ const Wrapper = styled.label`
   & input:checked {
     & ~ label {
       ${({ theme }) =>
-    boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
+        boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
       color: ${({ theme }) => theme.font.regular};
     }
   }
@@ -33,7 +33,7 @@ const VisiblePart = styled.label`
   ${transition()};
   &:hover {
     ${({ theme }) =>
-    boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
+      boxShadow(theme.components.shadow1, theme.components.shadow2, true)}
   }
 `;
 
@@ -46,7 +46,7 @@ export const Checkbox: FC<Props> = ({ onChange }) => {
   return (
     <Wrapper>
       <input id={fieldId} type="checkbox" onChange={onChange} />
-      <VisiblePart htmlFor={fieldId}>✔</VisiblePart>
+      <VisiblePart htmlFor={fieldId}>✓</VisiblePart>
     </Wrapper>
   );
 };

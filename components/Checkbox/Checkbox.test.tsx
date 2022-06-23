@@ -13,7 +13,7 @@ describe("Checkbox test cases", () => {
   it("Check onChange callback", () => {
     const onChange = jest.fn();
     render(<Checkbox onChange={onChange} />);
-    const element = screen.getByText("✔");
+    const element = screen.getByText("✓");
     userEvent.click(element);
     expect(onChange).toHaveBeenCalled();
   });
