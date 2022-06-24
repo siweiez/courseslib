@@ -1,15 +1,15 @@
 export const mockUser = {
-  "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU2MDM2NzE4LCJleHAiOjE2NTg2Mjg3MTh9.SNHs7DZn0Dla8J3jvkPx44gd34TBOZMYFLbQtHrZ53Y",
+  "jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjU2MDQ2NzA3LCJleHAiOjE2NTg2Mzg3MDd9.PETY5jb9d5Tbw3GXU60M_n9Jtcoo6L5u3ATuf8osiag",
   "user": {
     "id": 2,
-    "username": "John",
+    "username": "Johndoedoe",
     "email": "john@doe.com",
     "password": "password",
     "provider": "local",
     "confirmed": true,
     "blocked": false,
     "createdAt": "2022-06-23T06:37:08.989Z",
-    "updatedAt": "2022-06-23T06:37:08.989Z"
+    "updatedAt": "2022-06-24T04:57:23.702Z"
   }
 };
 

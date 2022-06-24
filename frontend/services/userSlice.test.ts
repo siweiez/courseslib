@@ -1,4 +1,4 @@
-import { storeCreator as globalStoreCreator } from "@/store";
+import { configureStore } from "@reduxjs/toolkit";
 import { mockUser, ValidationError, RegistrationError } from "@/mocks/user";
 import {
   reducer,
@@ -8,11 +8,7 @@ import {
   registration,
 } from "./userSlice";
 
-const rootReducer = {
-  user: reducer,
-};
-
-const storeCreator = () => globalStoreCreator(rootReducer);
+const storeCreator = () => configureStore({ reducer: { user: reducer } });
 
 const updatedState = {
   jwt: mockUser.jwt,
@@ -57,12 +53,10 @@ describe("User slice check", () => {
       expect(localStorage.getItem("username")).toBe(mockUser.user.username);
       expect(localStorage.getItem("email")).toBe(mockUser.user.email);
     });
-
     it("fail login flow", async () => {
       const store = storeCreator();
       await store.dispatch(login({ ...loginData, password: "wrongpass" }));
       const state = store.getState();
-
       expect(state).toEqual({
         user: {
           ...initialState,
@@ -71,13 +65,12 @@ describe("User slice check", () => {
         },
       });
     });
-
     it("login flow with saved jwt", async () => {
       // Set the jwt in localStorage
       localStorage.setItem("jwt", mockUser.jwt);
       const store = storeCreator();
       // In this case the jwt is already saved in localStorage
-      await store.dispatch(login({}));
+      await store.dispatch(login());
       const state = store.getState();
       expect(state).toEqual({
         user: {
@@ -103,12 +96,10 @@ describe("User slice check", () => {
           requestState: "fulfilled",
         },
       });
-
       // Check that the data is stored in localStorage
       expect(localStorage.getItem("jwt")).toBe(mockUser.jwt);
       expect(localStorage.getItem("username")).toBe(mockUser.user.username);
       expect(localStorage.getItem("email")).toBe(mockUser.user.email);
-
       // Logout
       await store.dispatch(logout());
       const stateAfterLogout = store.getState();
