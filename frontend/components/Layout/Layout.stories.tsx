@@ -1,5 +1,7 @@
-import { Layout } from "./Layout";
+import { Provider } from "react-redux";
 import { ComponentStoryObj, ComponentMeta } from "@storybook/react";
+import { store } from "@/store";
+import { Layout } from "./Layout";
 
 export default {
   title: "Content/Layout",
@@ -25,4 +27,11 @@ export const BasicLayout: ComponentStoryObj<typeof Layout> = {
       </>
     ),
   },
+  decorators: [
+    (Story) => (
+      <Provider store={store}>
+        <Story />
+      </Provider>
+    ),
+  ],
 };
