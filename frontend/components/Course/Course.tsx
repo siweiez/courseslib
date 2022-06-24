@@ -10,12 +10,20 @@ const Section = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 2vmin;
+  padding: 1.5rem;
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.font.regular};
   ${borderRadius};
   ${({ theme }) =>
     boxShadow(theme.components.shadow1, theme.components.shadow2)};
+`;
+
+const StyledHeader = styled.header`
+padding-top: 0.5rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 `;
 
 const CourseLink = styled(StyledLink)`
@@ -36,8 +44,8 @@ export const Course: FC<Props> = ({ children, header, link, imageProps }) => (
   <Link href={link} passHref>
     <CourseLink>
       <Section>
-        <h2>{header}</h2>
-        <Image {...imageProps} alt={header} />
+        <Image style={{ borderRadius: "10px" }} {...imageProps} alt={header} />
+        <StyledHeader>{header}</StyledHeader>
         {children}
       </Section>
     </CourseLink>

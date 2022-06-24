@@ -60,7 +60,7 @@ const Home: NextPage<{
               data: {
                 attributes: {
                   formats: {
-                    small: { width, height, url },
+                    medium: { width, height, url },
                   },
                 },
               },

@@ -17,8 +17,8 @@ export const response = {
               "name": "piano.png",
               "alternativeText": "piano.png",
               "caption": "piano.png",
-              "width": 750,
-              "height": 422,
+              "width": 1280,
+              "height": 720,
               "formats": {
                 "thumbnail": {
                   "name": "thumbnail_piano.png",
@@ -28,7 +28,29 @@ export const response = {
                   "path": null,
                   "width": 245,
                   "height": 138,
-                  "size": 5.98,
+                  "size": 5.19,
+                  "url": "/covers/piano.png"
+                },
+                "large": {
+                  "name": "large_piano.png",
+                  "hash": "large_piano_0260746f60",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "path": null,
+                  "width": 1000,
+                  "height": 563,
+                  "size": 34.74,
+                  "url": "/covers/piano.png"
+                },
+                "medium": {
+                  "name": "medium_piano.png",
+                  "hash": "medium_piano_0260746f60",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "path": null,
+                  "width": 750,
+                  "height": 422,
+                  "size": 22.88,
                   "url": "/covers/piano.png"
                 },
                 "small": {
@@ -39,20 +61,20 @@ export const response = {
                   "path": null,
                   "width": 500,
                   "height": 281,
-                  "size": 15.85,
+                  "size": 13.25,
                   "url": "/covers/piano.png"
                 }
               },
               "hash": "piano_0260746f60",
               "ext": ".png",
               "mime": "image/png",
-              "size": 29.55,
-              "url":  "/covers/piano.png",
+              "size": 44.79,
+              "url": "/covers/piano.png",
               "previewUrl": null,
               "provider": "local",
               "provider_metadata": null,
               "createdAt": "2022-06-24T07:23:27.508Z",
-              "updatedAt": "2022-06-24T07:23:27.508Z"
+              "updatedAt": "2022-06-24T20:59:03.050Z"
             }
           }
         }
@@ -75,8 +97,8 @@ export const response = {
               "name": "drawing.png",
               "alternativeText": "drawing.png",
               "caption": "drawing.png",
-              "width": 1841,
-              "height": 961,
+              "width": 1920,
+              "height": 1080,
               "formats": {
                 "thumbnail": {
                   "name": "thumbnail_drawing.png",
@@ -85,8 +107,8 @@ export const response = {
                   "mime": "image/png",
                   "path": null,
                   "width": 245,
-                  "height": 128,
-                  "size": 4.84,
+                  "height": 138,
+                  "size": 5.61,
                   "url": "/covers/drawing.png"
                 },
                 "large": {
@@ -96,8 +118,8 @@ export const response = {
                   "mime": "image/png",
                   "path": null,
                   "width": 1000,
-                  "height": 522,
-                  "size": 34.44,
+                  "height": 563,
+                  "size": 54.95,
                   "url": "/covers/drawing.png"
                 },
                 "medium": {
@@ -107,8 +129,8 @@ export const response = {
                   "mime": "image/png",
                   "path": null,
                   "width": 750,
-                  "height": 391,
-                  "size": 21.87,
+                  "height": 422,
+                  "size": 33.83,
                   "url": "/covers/drawing.png"
                 },
                 "small": {
@@ -118,21 +140,21 @@ export const response = {
                   "mime": "image/png",
                   "path": null,
                   "width": 500,
-                  "height": 261,
-                  "size": 12.28,
+                  "height": 281,
+                  "size": 16.97,
                   "url": "/covers/drawing.png"
                 }
               },
               "hash": "drawing_ba9437f692",
               "ext": ".png",
               "mime": "image/png",
-              "size": 16.91,
+              "size": 159.79,
               "url": "/covers/drawing.png",
               "previewUrl": null,
               "provider": "local",
               "provider_metadata": null,
               "createdAt": "2022-06-24T07:23:27.774Z",
-              "updatedAt": "2022-06-24T07:23:27.774Z"
+              "updatedAt": "2022-06-24T20:59:12.276Z"
             }
           }
         }
@@ -155,8 +177,8 @@ export const response = {
               "name": "singing.png",
               "alternativeText": "singing.png",
               "caption": "singing.png",
-              "width": 600,
-              "height": 400,
+              "width": 1280,
+              "height": 720,
               "formats": {
                 "thumbnail": {
                   "name": "thumbnail_singing.png",
@@ -164,10 +186,32 @@ export const response = {
                   "ext": ".png",
                   "mime": "image/png",
                   "path": null,
-                  "width": 234,
-                  "height": 156,
-                  "size": 2.78,
-                  "url": "/cover/singing.png"
+                  "width": 245,
+                  "height": 138,
+                  "size": 6.84,
+                  "url": "/covers/singing.png"
+                },
+                "large": {
+                  "name": "large_singing.png",
+                  "hash": "large_singing_18cb50ec47",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "path": null,
+                  "width": 1000,
+                  "height": 563,
+                  "size": 95.35,
+                  "url": "/covers/singing.png"
+                },
+                "medium": {
+                  "name": "medium_singing.png",
+                  "hash": "medium_singing_18cb50ec47",
+                  "ext": ".png",
+                  "mime": "image/png",
+                  "path": null,
+                  "width": 750,
+                  "height": 422,
+                  "size": 57.3,
+                  "url": "/covers/singing.png"
                 },
                 "small": {
                   "name": "small_singing.png",
@@ -176,21 +220,21 @@ export const response = {
                   "mime": "image/png",
                   "path": null,
                   "width": 500,
-                  "height": 333,
-                  "size": 7.13,
-                  "url": "/cover/singing.png"
+                  "height": 281,
+                  "size": 25.66,
+                  "url": "/covers/singing.png"
                 }
               },
               "hash": "singing_18cb50ec47",
               "ext": ".png",
               "mime": "image/png",
-              "size": 10.85,
-              "url": "/cover/singing.png",
+              "size": 135.37,
+              "url": "/covers/singing.png",
               "previewUrl": null,
               "provider": "local",
               "provider_metadata": null,
               "createdAt": "2022-06-24T07:23:27.549Z",
-              "updatedAt": "2022-06-24T07:23:27.549Z"
+              "updatedAt": "2022-06-24T20:59:19.504Z"
             }
           }
         }
