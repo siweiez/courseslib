@@ -14,6 +14,10 @@ module.exports = {
     "@storybook/addon-interactions",
     "@storybook/addon-a11y",
   ],
+  env: (config) => ({
+    ...config,
+    NEXT_PUBLIC_STRAPI_URL: "",
+  }),
   webpackFinal: async (config) => {
     config.resolve.plugins = [
       ...(config.resolve.plugins || []),
@@ -31,4 +35,5 @@ module.exports = {
   features: {
     emotionAlias: false,
   },
+  typescript: { reactDocgen: false },
 };
