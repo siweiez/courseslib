@@ -19,7 +19,7 @@ const Section = styled.section`
 `;
 
 const StyledHeader = styled.header`
-padding-top: 0.5rem;
+  padding-top: 0.5rem;
   text-align: center;
   font-size: 1.6rem;
   font-weight: 600;
