@@ -2,7 +2,11 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["localhost:1337", "localhost"],
+    domains: [
+      "localhost:1337",
+      "localhost",
+      "courseslib-backend.herokuapp.com",
+    ],
   },
 };
 
