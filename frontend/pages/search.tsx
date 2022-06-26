@@ -18,12 +18,12 @@ const fetchCourses = async (q: string) => {
         $or: [
           {
             header: {
-              $contains: q,
+              $containsi: q,
             },
           },
           {
             subtitle: {
-              $contains: q,
+              $containsi: q,
             },
           },
         ],
