@@ -55,9 +55,6 @@ export const Layout: FC = ({ children }) => {
           </LogoLink>
         </Link>
         <MainNav>
-          <Link href="/all" passHref>
-            <StyledLink>All</StyledLink>
-          </Link>
           <Link href={username ? "/user" : "/login"} passHref>
             <IconButton name={username ? "User" : "Login"} size={1} />
           </Link>

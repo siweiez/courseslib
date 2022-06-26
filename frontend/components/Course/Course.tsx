@@ -9,37 +9,45 @@ const Section = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 1.5rem;
   background: ${({ theme }) => theme.background};
   color: ${({ theme }) => theme.font.regular};
   ${borderRadius};
   ${({ theme }) =>
     boxShadow(theme.components.shadow1, theme.components.shadow2)};
+`;
+
+const StyledHeader = styled.header`
+  padding-top: 0.5rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+`;
+
+const CourseLink = styled(StyledLink)`
+  display: flex;
   width: 94vw;
   @media (min-width: 900px) {
     width: 46vw;
   }
 `;
 
-const CourseLink = styled(StyledLink)`
-  padding: 1vmin 4vmin;
-`;
-
 export type Props = {
   header: string;
   link: string;
   imageProps: ImageProps;
-  children: any;
 };
 
 export const Course: FC<Props> = ({ children, header, link, imageProps }) => (
-  <Section>
-    <Link href={link} passHref>
-      <CourseLink>
-        <h2>{header}</h2>
-        <Image alt="" {...imageProps} />
+  <Link href={link} passHref>
+    <CourseLink>
+      <Section>
+        <Image style={{ borderRadius: "10px" }} {...imageProps} alt={header} />
+        <StyledHeader>{header}</StyledHeader>
         {children}
-      </CourseLink>
-    </Link>
-  </Section>
+      </Section>
+    </CourseLink>
+  </Link>
 );
