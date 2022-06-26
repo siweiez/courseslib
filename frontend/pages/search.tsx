@@ -8,6 +8,7 @@ import { Courses } from "@/components/Course";
 
 type CoursesResponce = Response<CourseType[]>;
 
+// https://docs.strapi.io/developer-docs/latest/developer-resources/database-apis-reference/query-engine-api.html
 const fetchCourses = async (q: string) => {
   const api_url = process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const query = qs.stringify(

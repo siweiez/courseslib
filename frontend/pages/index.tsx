@@ -5,6 +5,7 @@ import { Courses } from "@/components/Course";
 
 type CoursesResponce = Response<CourseType[]>;
 
+// https://nextjs.org/docs/basic-features/data-fetching/get-static-props
 export const getStaticProps: GetStaticProps = async () => {
   const api_url = process.env.NEXT_PUBLIC_STRAPI_API_URL;
   const responce = await fetch(`${api_url}/courses?populate=*`, {
