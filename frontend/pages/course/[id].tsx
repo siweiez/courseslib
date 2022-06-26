@@ -31,7 +31,6 @@ export const getStaticPaths: GetStaticPaths = async () => {
   });
 
   const response: CoursesResponce = await res.json();
-
   const status = response?.error?.status;
 
   if (status && (status < 200 || status >= 300)) {
@@ -40,9 +39,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
       fallback: true,
     };
   }
-
   const paths = response.data.map(({ id }) => `/course/${id}`);
-
   return {
     paths,
     fallback: true,
@@ -51,15 +48,11 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 export const getStaticProps: GetStaticProps = async (context) => {
   const api_url = process.env.NEXT_PUBLIC_STRAPI_API_URL;
-
   const id = context?.params?.id;
-
   const res = await fetch(`${api_url}/courses/${id}?populate=*`, {
     method: "GET",
   });
-
   const { error, data, meta }: CourseResponce = await res.json();
-
   if (error && (error?.status < 200 || error?.status >= 300)) {
     return {
       props: {
@@ -68,9 +61,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
       },
     };
   }
-
   const md = new MarkdownIt();
-
   return {
     props: {
       course: {

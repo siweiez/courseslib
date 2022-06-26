@@ -5,7 +5,10 @@ import User from "@/pages/user";
 
 jest.mock("next/router", () => ({
   ...jest.requireActual("next/router"),
-  useRouter: jest.fn(),
+  useRouter: jest.fn().mockReturnValue({
+    query: {},
+    push: jest.fn(),
+  }),
 }));
 
 const preloadedState = {
@@ -41,7 +44,10 @@ describe("User page", () => {
   it("Redirect to login page", async () => {
     // Mock the router
     const push = jest.fn();
-    (useRouter as jest.Mock).mockReturnValue({ push });
+    (useRouter as jest.Mock).mockReturnValue({
+      query: {},
+      push,
+    });
     render(<User />, {
       preloadedState: {
         user: {
