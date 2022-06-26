@@ -10,7 +10,7 @@ export default {
 
 export const BasicCourse: ComponentStoryObj<typeof Course> = {
   play: async () => {
-    await expect(screen.getByRole("heading")).toBeInTheDocument();
+    await expect(screen.getByRole("banner")).toBeInTheDocument();
     await expect(screen.getByRole("img")).toBeInTheDocument();
     await expect(screen.getByRole("link")).toBeInTheDocument();
   },
