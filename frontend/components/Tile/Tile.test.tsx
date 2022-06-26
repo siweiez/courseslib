@@ -11,7 +11,6 @@ describe("Tile test cases", () => {
         veniam, quis nostrud exercitation ullamco laboris
       </Tile>
     );
-
     expect(asFragment()).toMatchSnapshot();
   });
 });
