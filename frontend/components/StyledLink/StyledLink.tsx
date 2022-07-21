@@ -9,7 +9,9 @@ export const StyledLink = styled.a<Props>`
   cursor: pointer;
   color: ${({ theme }) => theme.font.regular};
   text-decoration: ${({ underline }) => (underline ? "underline" : "none")};
+  transition: all 0.3s ease-in-out;
   &:hover {
-    opacity: 0.7;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.8;
   }
 `;

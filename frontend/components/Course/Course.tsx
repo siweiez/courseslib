@@ -5,6 +5,7 @@ import styled from "@emotion/styled";
 import { boxShadow, borderRadius } from "@/components/styles";
 import { StyledLink } from "@/components/StyledLink";
 import { Course as CourseType } from "@/types";
+import { IconButton } from "../IconButton";
 
 const Section = styled.section`
   display: flex;
@@ -27,12 +28,20 @@ const StyledHeader = styled.header`
   letter-spacing: 1px;
 `;
 
-const CourseLink = styled(StyledLink)`
+const Block = styled.section`
   display: flex;
+  flex-direction: column;
   width: 94vw;
   @media (min-width: 900px) {
     width: 46vw;
   }
+`;
+
+const ButtonBlock = styled.section`
+  width: 100%;
+  display: flex;
+  position: relative;
+  justify-content: end;
 `;
 
 export type Props = {
@@ -42,15 +51,26 @@ export type Props = {
 };
 
 export const Course: FC<Props> = ({ children, header, link, imageProps }) => (
-  <Link href={link} passHref>
-    <CourseLink>
-      <Section>
-        <Image style={{ borderRadius: "10px" }} {...imageProps} alt={header} />
-        <StyledHeader>{header}</StyledHeader>
-        {children}
-      </Section>
-    </CourseLink>
-  </Link>
+  <Block>
+    <Section>
+      <Link href={link} passHref>
+        <StyledLink>
+          <Image style={{ borderRadius: "20px" }} {...imageProps} alt={header} />
+          <StyledHeader>{header}</StyledHeader>
+        </StyledLink>
+      </Link>
+      {children}
+      <ButtonBlock>
+        <IconButton
+          name="Add"
+          color="secondary"
+          size={1.5}
+        >
+          Add to My List
+        </IconButton>
+      </ButtonBlock>
+    </Section>
+  </Block>
 );
 export const Wrapper = styled.div`
   display: flex;
