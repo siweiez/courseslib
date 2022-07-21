@@ -27,8 +27,9 @@ const StyledHeader = styled.header`
   letter-spacing: 1px;
 `;
 
-const CourseLink = styled(StyledLink)`
+const Block = styled.section`
   display: flex;
+  flex-direction: column;
   width: 94vw;
   @media (min-width: 900px) {
     width: 46vw;
@@ -42,15 +43,21 @@ export type Props = {
 };
 
 export const Course: FC<Props> = ({ children, header, link, imageProps }) => (
-  <Link href={link} passHref>
-    <CourseLink>
-      <Section>
-        <Image style={{ borderRadius: "10px" }} {...imageProps} alt={header} />
-        <StyledHeader>{header}</StyledHeader>
-        {children}
-      </Section>
-    </CourseLink>
-  </Link>
+  <Block>
+    <Section>
+      <Link href={link} passHref>
+        <StyledLink>
+          <Image
+            style={{ borderRadius: "20px" }}
+            {...imageProps}
+            alt="cover image"
+          />
+          <StyledHeader>{header}</StyledHeader>
+        </StyledLink>
+      </Link>
+      {children}
+    </Section>
+  </Block>
 );
 export const Wrapper = styled.div`
   display: flex;
@@ -89,7 +96,7 @@ export const Courses: FC<{ courses: CourseType[]; strapi_url: string }> = ({
           imageProps={{
             width,
             height,
-            alt: `Cover for ${header}`,
+            alt: `cover image`,
             src: `${strapi_url}${url}`,
           }}
         >

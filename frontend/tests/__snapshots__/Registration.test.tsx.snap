@@ -34,7 +34,7 @@ exports[`Registration page Render check 1`] = `
       class="css-qbqlvy"
     >
       <section
-        class="css-6q0t2w"
+        class="css-2otg5n"
       >
         <h2>
           Create an account
@@ -132,7 +132,7 @@ exports[`Registration page Render check 1`] = `
         </button>
         <h3>
           <a
-            class="css-pm0vza"
+            class="css-h57os4"
             href="/login"
           >
             Login

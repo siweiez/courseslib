@@ -20,7 +20,7 @@ export const BasicCourse: ComponentStoryObj<typeof Course> = {
     imageProps: {
       width: 1368,
       height: 770,
-      alt: "Logo for Hands-On React. Build advanced React JS Frontend with expert",
+      alt: "cover image",
       src: "/covers/hands-on_reactjs_cover.png",
     },
     children: (
