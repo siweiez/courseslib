@@ -29,12 +29,12 @@ const dark = {
 
 const light: AppTheme = {
   name: "light",
-  background: "#e4ebf5",
+  background: "#f2f7fc",
   components: {
     background: "#DEE7F2",
     shadow1: "#c8d0e7",
     shadow2: "#FFFFFF",
-    active: "#e4ebf5",
+    active: "#f2f7fc",
     nonActive: "#9baacf",
     primary: "#6d5dfc",
     danger: "#dc3545e6",

@@ -5,7 +5,6 @@ import styled from "@emotion/styled";
 import { boxShadow, borderRadius } from "@/components/styles";
 import { StyledLink } from "@/components/StyledLink";
 import { Course as CourseType } from "@/types";
-import { IconButton } from "../IconButton";
 
 const Section = styled.section`
   display: flex;
@@ -37,13 +36,6 @@ const Block = styled.section`
   }
 `;
 
-const ButtonBlock = styled.section`
-  width: 100%;
-  display: flex;
-  position: relative;
-  justify-content: end;
-`;
-
 export type Props = {
   header: string;
   link: string;
@@ -58,17 +50,12 @@ export const Course: FC<Props> = ({ children, header, link, imageProps }) => (
           <Image
             style={{ borderRadius: "20px" }}
             {...imageProps}
-            alt={header}
+            alt="cover image"
           />
           <StyledHeader>{header}</StyledHeader>
         </StyledLink>
       </Link>
       {children}
-      <ButtonBlock>
-        <IconButton name="Add" color="secondary" size={1.5}>
-          Add to My List
-        </IconButton>
-      </ButtonBlock>
     </Section>
   </Block>
 );
@@ -109,7 +96,7 @@ export const Courses: FC<{ courses: CourseType[]; strapi_url: string }> = ({
           imageProps={{
             width,
             height,
-            alt: `Cover for ${header}`,
+            alt: `cover image`,
             src: `${strapi_url}${url}`,
           }}
         >

@@ -10,7 +10,7 @@ describe("Course test cases", () => {
         imageProps={{
           width: 1368,
           height: 770,
-          alt: "Logo for Hands-On React",
+          alt: "cover image",
           src: "/hands-on_reactjs_cover.png",
         }}
       >
