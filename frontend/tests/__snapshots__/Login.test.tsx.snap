@@ -31,7 +31,7 @@ exports[`Login page Render check 1`] = `
     class="css-u0jlnf"
   >
     <a
-      class="css-4w3zwj"
+      class="css-1571jsz"
       href="/"
     >
       <header
@@ -218,7 +218,7 @@ exports[`Login page Render check 1`] = `
             </button>
             <h3>
               <a
-                class="css-pm0vza"
+                class="css-h57os4"
                 href="/registration"
               >
                 Create account

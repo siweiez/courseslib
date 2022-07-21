@@ -6,7 +6,7 @@ exports[`User page Load user 1`] = `
     class="css-u0jlnf"
   >
     <a
-      class="css-4w3zwj"
+      class="css-1571jsz"
       href="/"
     >
       <header
@@ -154,7 +154,7 @@ exports[`User page Render check 1`] = `
     class="css-u0jlnf"
   >
     <a
-      class="css-4w3zwj"
+      class="css-1571jsz"
       href="/"
     >
       <header

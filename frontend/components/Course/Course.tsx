@@ -55,17 +55,17 @@ export const Course: FC<Props> = ({ children, header, link, imageProps }) => (
     <Section>
       <Link href={link} passHref>
         <StyledLink>
-          <Image style={{ borderRadius: "20px" }} {...imageProps} alt={header} />
+          <Image
+            style={{ borderRadius: "20px" }}
+            {...imageProps}
+            alt={header}
+          />
           <StyledHeader>{header}</StyledHeader>
         </StyledLink>
       </Link>
       {children}
       <ButtonBlock>
-        <IconButton
-          name="Add"
-          color="secondary"
-          size={1.5}
-        >
+        <IconButton name="Add" color="secondary" size={1.5}>
           Add to My List
         </IconButton>
       </ButtonBlock>
